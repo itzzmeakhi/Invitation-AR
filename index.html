@@ -87,23 +87,7 @@
                         document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
                     });
 
-                }
-                /* init: function() {
-                    this.tick = AFRAME.utils.throttleTick(this.tick, 500, thick);
-                },
-
-                tick: function(t, dt) {
-                    if(document.querySelector("#marker3").object3D.visible == true) {
-                        mapobj = document.querySelector('#img-map');
-
-                        mapobj.addEventListener('click', function() {
-                            alert("Click Event Triggered");
-                            document.location.href = "http://www.google.com";
-                        });
-                    } else {
-                        // DO NOTHING WHEN MARKER IS HIDDEN
-                    }
-                }  */
+		}
 
 
             }); 
@@ -159,9 +143,9 @@
 
             <!-- Map Location MArker -->
 
-            <a-marker id="marker3" type='pattern' url='markers/map-pattern-marker.patt' cursor='rayOrigin: mouse' mappoint-handler>
+            <a-marker id="marker3" type='pattern' url='markers/map-pattern-marker.patt' cursor='rayOrigin: mouse'>
                 <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
-                <a-plane id="img-map" scale = "2 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#map-point'></a-plane>
+                <a-plane id="img-map" scale = "2 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#map-point' mappoint-handler></a-plane>
                 <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Fun Moments"></a-entity>-->
             </a-marker>     
             
