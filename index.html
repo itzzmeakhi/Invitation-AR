@@ -18,6 +18,7 @@
             
             AFRAME.registerComponent('video-vidhandler', {
                 init: function() {
+		    console.log('video init entered');
                     this.toggle = false;
                     this.vid = document.querySelector("#invitation");
                     this.vid.pause();
@@ -39,6 +40,7 @@
 
             AFRAME.registerComponent('clock-text', {
                 init: function() {
+		    console.log('Timer init entered');
                     var el = this.el;
                     this.ready = false;
 		    el.addEventListener('textfontset', function() {
@@ -80,10 +82,10 @@
 		
 	    AFRAME.registerComponent('mappoint-handler', {
             	init: function() {
-		    //console.log('Mappoint entered');
+		    console.log('Mappoint init entered');
 		    var el = this.el;
 		    this.ready = false;
-		    el.addEventListener('click', function() {
+		    this.el.addEventListener('click', function(evt) {
 	            	this.ready = true;
 		    }.bind(this));
 		},
