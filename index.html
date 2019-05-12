@@ -86,9 +86,13 @@
             
 		init: function() {
 		    //console.log("I was triggered");
-		    this.el.addEventListener('click', function(evt) {
-			console.log("I was clicked");
-			document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
+		   
+		},
+		tick: function() {
+		    //console.log("I was triggered");
+                    this.el.addEventListener('click', function(evt) {
+                        //console.log("I was clicked");
+                        document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
 		    });
 		}
 	    });
