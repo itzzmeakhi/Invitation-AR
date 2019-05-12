@@ -82,16 +82,13 @@
 	    // Mappoint component
 		
 	    AFRAME.registerComponent('mappoint-handler', {
-            	init: function() {
-		    console.log('Mappoint init entered');
-		},
-		tick: function() {
-		    console.log("Tick function entered");
-      		    this.el.addEventListener('click', function(evt) {
-                        //console.log("I was clicked");
-                        //document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
-			console.log("Clicked");
-      		    });
+            
+		init: function() {
+		    //console.log("I was triggered");
+		    this.el.addEventListener('click', function(evt) {
+			console.log("I was clicked");
+			document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
+		    });
 		}
 	    });
 			
@@ -151,9 +148,9 @@
 
             <!-- Map Location Marker -->
 
-            <a-marker id="marker3" type='pattern' url='markers/map-pattern-marker.patt' cursor='rayOrigin: mouse' mappoint-handler>
+            <a-marker id="marker3" type='pattern' url='markers/map-pattern-marker.patt' cursor='rayOrigin: mouse'>
                 <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
-                <a-plane id="img-map" scale = "2 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#map-point'></a-plane>
+                <a-plane id="img-map" scale = "2 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#map-point' mappoint-handler></a-plane>
                 <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Fun Moments"></a-entity>-->
             </a-marker>     
             
