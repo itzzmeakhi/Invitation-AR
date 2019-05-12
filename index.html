@@ -78,26 +78,20 @@
                 }
             });
 		
-	    var isClicked = false;
 		
 	    // Mappoint component
 		
 	    AFRAME.registerComponent('mappoint-handler', {
             	init: function() {
 		    console.log('Mappoint init entered');
-		    
-		    this.el.addEventListener('click', function(evt) {
-	            	isClicked = true;
-			console.log('Click Event');
-		    });
 		},
 		tick: function() {
-		    console.log('Tick function entered');
-		    if(!isClicked) {
-	                return;
-			console.log('Not Clicked');
-		    }
-		    console.log("Clicked");
+		    console.log("Tick function entered");
+      		    this.el.addEventListener('click', function(evt) {
+                        //console.log("I was clicked");
+                        //document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
+			console.log("Clicked");
+      		    });
 		}
 	    });
 			
