@@ -41,12 +41,12 @@
                 init: function() {
                     var el = this.el;
                     this.ready = false;
-		            el.addEventListener('textfontset', function() {
-    	                this.ready = true;
-		            }.bind(this));
+		    el.addEventListener('textfontset', function() {
+    	            	this.ready = true;
+		    }.bind(this));
                 },
                 tick: function() {
-  	                var el = this.el;
+  	        	var el = this.el;
                     if (!this.ready) {
     	                return;
                     }
@@ -83,7 +83,7 @@
                 init: function() {
                     var el = this.el;
                     this.ready = false;
-		            el.addEventListener('textfontset', function() {
+		            el.addEventListener('click', function() {
     	                this.ready = true;
 		            }.bind(this));
                 },
@@ -94,10 +94,10 @@
                     }
 
                     //console.log("I was triggered");
-                    this.el.addEventListener('click', function(evt) {
+                    //this.el.addEventListener('click', function(evt) {
                         //console.log("I was clicked");
-                        document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
-                    });
+                    document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
+                    //});
 
                 }
 
