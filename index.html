@@ -87,12 +87,15 @@
 		    this.ready = false;
 		    this.el.addEventListener('click', function(evt) {
 	            	this.ready = true;
+			console.log('Click Event');
 		    }.bind(this));
 		},
 		tick: function() {
 	            var el = this.el;
+		    console.log('Tick function entered');
 		    if(!this.ready) {
 	                return;
+			console.log('Not ready');
 		    }
 		    console.log("Clicked");
 		}
