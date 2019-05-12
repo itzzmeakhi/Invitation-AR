@@ -53,7 +53,7 @@
     	                return;
                     }
 
-                    var endTime = new Date("May 29, 2019 00:54:00").getTime();
+                    var endTime = new Date("May 29, 2023 00:54:00").getTime();
                     var timeRem;
 
                     var timer = setInterval(function() {
@@ -85,7 +85,7 @@
 		    console.log('Mappoint init entered');
 		    var el = this.el;
 		    this.ready = false;
-		    this.el.addEventListener('click', function(evt) {
+		    el.addEventListener('click', function(evt) {
 	            	this.ready = true;
 			console.log('Click Event');
 		    }.bind(this));
