@@ -80,7 +80,19 @@
 		
 	    AFRAME.registerComponent('mappoint-handler', {
             	init: function() {
-		    console.log('Mappoint entered');
+		    //console.log('Mappoint entered');
+		    var el = this.el;
+		    this.ready = false;
+		    el.addEventListener('click', function() {
+	            	this.ready = true;
+		    }.bind(this));
+		},
+		tick: function() {
+	            var el = this.el;
+		    if(!this.ready) {
+	                return;
+		    }
+		    console.log("Clicked");
 		}
 	    });
 			
