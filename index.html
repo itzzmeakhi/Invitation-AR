@@ -76,32 +76,7 @@
                 }
             });
 
-            // Mappoint Component
-
-            AFRAME.registerComponent('mappoint-handler', {
-
-                init: function() {
-                    var el = this.el;
-                    this.ready = false;
-		            el.addEventListener('click', function() {
-    	                this.ready = true;
-		            }.bind(this));
-                },
-                tick: function() {
-  	                var el = this.el;
-                    if (!this.ready) {
-    	                return;
-                    }
-
-                    //console.log("I was triggered");
-                    //this.el.addEventListener('click', function(evt) {
-                        //console.log("I was clicked");
-                    document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
-                    //});
-
-                }
-
-            }); 
+ 
             
         </script>
     </head>
