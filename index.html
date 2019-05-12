@@ -86,21 +86,19 @@
             
 		init: function() {
 		    //console.log("I was triggered");
-		   
-		},
-		tick: function() {
-		    //console.log("I was triggered");
-                    this.el.addEventListener('click', function(evt) {
-                        //console.log("I was clicked");
-                        document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
+		    const marker3 = document.querySelector("#marker3");
+		    const imgMap = document.querySelector("#img-map");
+			
+		    marker3.addEventListener('click', function(ev, target) {
+		        const intersectedElement = ev && ev.detail && ev.detail.intersectedEl;
+			if (imgMap && intersectedElement === imgMap) {
+			    console.log("Clicked");
+			    document.location.href = "https://goo.gl/maps/gRsth6SHo5AgwMbT7";
+			}
 		    });
 		}
 	    });
 			
-		
-	    
-
- 
             
         </script>
     </head>
@@ -153,9 +151,9 @@
 
             <!-- Map Location Marker -->
 
-            <a-marker id="marker3" type='pattern' url='markers/map-pattern-marker.patt' cursor='rayOrigin: mouse'>
+            <a-marker id="marker3" type='pattern' url='markers/map-pattern-marker.patt' emitevents="true" cursor="rayOrigin: mouse" mappoint-handler>
                 <!--<a-box position='0 0 0' material='color: red;'></a-box>-->
-                <a-plane id="img-map" scale = "2 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#map-point' cursor='rayOrigin: mouse' mappoint-handler></a-plane>
+                <a-plane id="img-map" scale = "2 2" position='0 0.1 0' rotation="-90 0 0" material='transparent:true;src:#map-point'></a-plane>
                 <!--<a-entity text="font: https://cdn.aframe.io/fonts/mozillavr.fnt; value: Fun Moments"></a-entity>-->
             </a-marker>     
             
