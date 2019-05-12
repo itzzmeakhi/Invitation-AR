@@ -78,24 +78,24 @@
                 }
             });
 		
+	    var isClicked = false;
+		
 	    // Mappoint component
 		
 	    AFRAME.registerComponent('mappoint-handler', {
             	init: function() {
 		    console.log('Mappoint init entered');
-		    var el = this.el;
-		    this.ready = false;
-		    el.addEventListener('click', function(evt) {
-	            	this.ready = true;
+		    
+		    this.el.addEventListener('click', function(evt) {
+	            	isClicked = true;
 			console.log('Click Event');
-		    }.bind(this));
+		    });
 		},
 		tick: function() {
-	            var el = this.el;
 		    console.log('Tick function entered');
-		    if(!this.ready) {
+		    if(!isClicked) {
 	                return;
-			console.log('Not ready');
+			console.log('Not Clicked');
 		    }
 		    console.log("Clicked");
 		}
