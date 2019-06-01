@@ -1,4 +1,4 @@
-# Invitation-AR
+# Augmented Reality (WebAR) based Invitation Cards
 
 Ever thought of inviting our buddies using invitation cards which are augmented reality enabled, 
 so that they can view can view the content in more realistic way rather than normal printed card pattern. 
